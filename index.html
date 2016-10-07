@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <img class='react-logo' src='assets/img/react-logo.svg'/>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            # react is easy
+            ### stop fucking it up
+          </script>
+        </section>
+
+        <section>
+          <h2>6 things to cover</h2>
+          <ol>
+            <li class="fragment fade-up">what it is</li>
+            <li class="fragment fade-up">what it isn't</li>
+            <li class="fragment fade-up">why people love it</li>
+            <li class="fragment fade-up">why people hate it</li>
+            <li class="fragment fade-up">why people fuck it up so bad</li>
+            <li class="fragment fade-up">how to not fuck it up</li>
+          </ol>
+        </section>
+
+        <!-- Section #1 ------------------------------------------------------->
+
+        <section>
+          <h1>#1</h1>
+          <h1>what it is</h1>
+        </section>
+
+        <section>
+          <h2>a hot shit javascript thing that renders interfaces</h2>
+          <h3 class="fragment fade-up">👉 ...and <em>only</em> renders interfaces 👈</h3>
+        </section>
+
+        <section data-state="componentsSlide">
+          <h2>component system</h2>
+          <div class='component'>
+            <div class='component-box fragment fade-up' data-fragment-index="1">
+              <ul class='component-list fragment fade-up' data-fragment-index="2">
+                <li class='fragment fade-up'></li>
+                <li class='fragment fade-up'></li>
+                <li class='fragment fade-up'></li>
+                <li class='fragment fade-up'></li>
+                <li class='fragment fade-up'></li>
+              </ul>
+              <div class='component-content fragment fade-up' data-fragment-index="3">
+                <div class='component-article fragment fade-up' data-fragment-index="4"></div>
+                <div class='component-article fragment fade-up' data-fragment-index="5"></div>
+                <div class='component-article fragment fade-up' data-fragment-index="6"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+
+    <script>
+      Reveal.addEventListener('componentsSlide', function() {
+        var fragments = document.querySelectorAll('.component .fragment');
+        var delay = 1000;
+        var speed = 75;
+
+        for (var i = 0; i < fragments.length; i++) {
+          window.setTimeout(function() {
+            Reveal.nextFragment();
+          }, delay);
+          delay += speed;
+        }
+
+      }, false );
+    </script>
+  </body>
+</html>
