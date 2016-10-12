@@ -48,16 +48,17 @@
 
         <section>
           <h1>#1</h1>
+          <hr>
           <h1>what it is</h1>
         </section>
 
         <section>
           <h2>a hot shit javascript thing that renders interfaces</h2>
-          <h3 class="fragment fade-up">👉 ...and <em>only</em> renders interfaces 👈</h3>
+          <h3 class="fragment fade-up">👉 ...reactively (lmao) 👈</h3>
         </section>
 
         <section data-state="componentsSlide">
-          <h2>component system</h2>
+          <h2>components</h2>
           <div class='component'>
             <div class='component-box fragment fade-up' data-fragment-index="1">
               <ul class='component-list fragment fade-up' data-fragment-index="2">
@@ -74,6 +75,14 @@
               </div>
             </div>
           </div>
+        </section>
+
+        <section>
+            <h2>data flows down</h2>
+            <p class='fragment fade-up'>
+              app state sits atop your components
+            </p>
+            <img src='assets/img/component-state-tree.svg' class='fragment fade-up' height='500px' />
         </section>
 
       </div>
@@ -98,10 +107,12 @@
     </script>
 
     <script>
-      Reveal.addEventListener('componentsSlide', function() {
+
+      function iterateFragments(selector) {
+
         var fragments = document.querySelectorAll('.component .fragment');
         var delay = 1000;
-        var speed = 75;
+        var speed = 150;
 
         for (var i = 0; i < fragments.length; i++) {
           window.setTimeout(function() {
@@ -110,7 +121,10 @@
           delay += speed;
         }
 
-      }, false );
+      }
+
+      Reveal.addEventListener('componentsSlide', iterateFragments, false );
+
     </script>
   </body>
 </html>
