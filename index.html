@@ -99,9 +99,9 @@
 
         <section>
           <h2>only re-render changes</h2>
-          <h6>but write code like it's rendered once</h6>
+          <h6 class='fragment fade-up'>...but write code like it's rendered once</h6>
           <h3>&nbsp;</h3>
-          <div data-markdown style='width:85%; margin:auto; font-size:1.3em;'>
+          <div  class='fragment fade-up' data-markdown style='width:90%; margin:auto; font-size:1.3em;'>
             <script type="text/template">
               ```js
               function GreetingComponent (props) {
@@ -122,14 +122,14 @@
         </section>
 
         <section>
-          <h2>one-way data</h2>
+          <h2>one-way data flow</h2>
           <p>&nbsp;</p>
           <div style='width:50%; float: left;'>
             <h3 class='fragment fade-up' data-fragment-index="1">deterministic</h3>
             <ul>
               <li class='fragment fade-up'>state is disconnected from i/o</li>
               <li class='fragment fade-up'>same input gives same output</li>
-              <li class='fragment fade-up'>fixing bugs is 👌</li>
+              <li class='fragment fade-up'>debugging is 👌</li>
             </ul>
           </div>
           <div style='width:50%; float: left;'>
@@ -137,7 +137,7 @@
             <ul>
               <li class='fragment fade-up'>components only need props</li>
               <li class='fragment fade-up'>not subject to rigid hierarchies</li>
-              <li class='fragment fade-up'>maintenance is 👌</li>
+              <li class='fragment fade-up'>refactoring is 👌</li>
             </ul>
           </div>
         </section>
