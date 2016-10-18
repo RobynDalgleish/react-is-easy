@@ -54,7 +54,7 @@
 
         <section>
           <h2>a hot shit javascript thing that renders interfaces</h2>
-          <h3 class="fragment fade-up">👉 ...reactively (lmao) 👈</h3>
+          <h3 class="fragment fade-up">👉 ...and <em>only</em> renders interfaces 👈</h3>
         </section>
 
         <section data-state="componentsSlide">
@@ -79,43 +79,67 @@
 
         <section>
           <h2>data flows down</h2>
-          <p class='fragment fade-up'>
-            app state floats above your components
+          <p>
+            <span>app state floats above your components.</span>
+            <br>
+            <span>pass only what's needed to children.</span>
           </p>
-          <img src='assets/img/component-state-tree.svg' class='fragment fade-up' height='500px' />
+          <img src='assets/img/component-state-tree.svg' height='450px' />
         </section>
 
         <section>
           <h2>events bubble up</h2>
-          <p class='fragment fade-up'>
-            emit changes to the app state
+          <p>
+            emit changes to the app state.
+            <br>
+            trigger a re-render when data changes.
           </p>
-          <img src='assets/img/component-event-tree.svg' class='fragment fade-up' height='500px' />
+          <img src='assets/img/component-event-tree.svg' height='450px' />
+        </section>
+
+        <section>
+          <h2>only re-render changes</h2>
+          <h6>but write code like it's rendered once</h6>
+          <h3>&nbsp;</h3>
+          <div data-markdown style='width:85%; margin:auto; font-size:1.3em;'>
+            <script type="text/template">
+              ```js
+              function GreetingComponent (props) {
+
+                // The first line will only be rendered once.
+                // The second line re-renders when the `name` prop changes.
+                return (
+                  <div>
+                    <p>Hello there!</p>
+                    <p>Your name is { props.name }</p>
+                  </div>
+                );
+
+              }
+              ```
+            </script>
+          </div>
         </section>
 
         <section>
           <h2>one-way data</h2>
           <p>&nbsp;</p>
-          <div class='fragment fade-up' style='width:50%; float: left;'>
-            <h6>deterministic</h6>
-            <p>component state is determined solely from input</p>
+          <div style='width:50%; float: left;'>
+            <h3 class='fragment fade-up' data-fragment-index="1">deterministic</h3>
+            <ul>
+              <li class='fragment fade-up'>state is disconnected from i/o</li>
+              <li class='fragment fade-up'>same input gives same output</li>
+              <li class='fragment fade-up'>fixing bugs is 👌</li>
+            </ul>
           </div>
-          <div class='fragment fade-up' style='width:50%; float: left;'>
-            <h6>portable</h6>
-            <p>components are decoupled and not subject to rigid hierarchies</p>
+          <div style='width:50%; float: left;'>
+            <h3 class='fragment fade-up' data-fragment-index="2">portable</h3>
+            <ul>
+              <li class='fragment fade-up'>components only need props</li>
+              <li class='fragment fade-up'>not subject to rigid hierarchies</li>
+              <li class='fragment fade-up'>maintenance is 👌</li>
+            </ul>
           </div>
-        </section>
-
-        <section>
-          <h2>the whole app re-renders</h2>
-          <h4 class='fragment fade-up'>...or does it? 🤔</h4>
-          <p class='fragment fade-up'>no, obviously not, that would be stupid</p>
-        </section>
-
-        <section>
-          <h2>only re-render what's changed</h2>
-          <p>write apps like everything is re-rendered</p>
-          <p>your ui will "react" to changes</p>
         </section>
 
       </div>
