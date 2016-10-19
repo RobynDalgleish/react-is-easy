@@ -65,3 +65,8 @@ section .component * {
   margin-left: 2vh;
   flex: 1;
 }
+
+.reveal section .logo-list img {
+  max-height: 100px;
+  margin: 30px;
+}

@@ -181,20 +181,98 @@
         </section>
 
         <section>
-          <h2>functional concepts</h2>
-          <ul>
-            <li>immutable data</li>
-            <li>composable components</li>
-          </ul>
-        </section>
-
-        <section>
           <h2>easy to test</h2>
-          <p>(easier than anything else)</p>
+          <p>
+            <small>(easier than anything else, at least)</small>
+          </p>
           <ul>
             <li>declarative components only need props</li>
             <li>no need for mocks or special test logic</li>
+            <li>easily run tests without build-up/tear-down</li>
           </ul>
+          <h3>&nbsp;</h3>
+          <h4>side effect</h4>
+          <p>
+            easy to test == easy to understand
+          </p>
+        </section>
+
+        <section>
+          <h2>functional concepts</h2>
+          <ul>
+            <li>immutable data</li>
+            <li>composable functions</li>
+            <li>declarative logic</li>
+          </ul>
+          <h3>&nbsp;</h3>
+          <h4>side effect</h4>
+          <p>
+            simplifies onboarding, documentation, and maintenance
+          </p>
+        </section>
+
+        <section>
+          <h2>scaleable</h2>
+          <p>
+            <small>for real, seriously</small>
+          </p>
+          <ul>
+            <li>no assumptions or requirements</li>
+            <li>100% flexible, with prescribed best-practices</li>
+            <li>as much or as little as you want</li>
+            <li>client-side, server-side, or both</li>
+          </ul>
+          <h3>&nbsp;</h3>
+          <h4>case in point</h4>
+          <p>
+            facebook's initial react app was just the chat box,
+            <br>
+            now it's the whole site
+          </p>
+        </section>
+
+        <section>
+          <h2>component lifecycles</h2>
+          <p>
+            make stateful data painless
+          </p>
+          <h4>&nbsp;</h4>
+          <h4>hooks for everything</h4>
+          <ul>
+            <li>component creation / destruction</li>
+            <li>prop changes</li>
+            <li>should update / will update / did update</li>
+          </ul>
+          <h4>&nbsp;</h4>
+          <h4>stop the jank</h4>
+          <p>
+            no race conditions, "cross-component" communication,
+            <br>
+            or <code>scope.$apply()</code> bullshit
+          </p>
+        </section>
+
+        <section data-state="logosSlide">
+          <h2>some big fuckin names</h2>
+          <p><small>significantly or entirely made with react</small></p>
+          <div class='logo-list'>
+            <img src='assets/img/logos/airbnb-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/dropbox-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/ebay-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/facebook-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/instagram-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/netflix-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/paypal-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/pinterest-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/twitter-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/uber-logo.png' class='fragment fade-up' />
+            <img src='assets/img/logos/whatsapp-logo.png' class='fragment fade-up' />
+          </div>
+        </section>
+
+        <section>
+          <h2>the competition is stiff</h2>
+          <img src="assets/img/sites-using-vue.png" />
         </section>
 
       </div>
@@ -220,11 +298,11 @@
 
     <script>
 
-      function iterateFragments(selector) {
+      function iterateFragments(selector, speed) {
 
-        var fragments = document.querySelectorAll('.component .fragment');
+        var fragments = document.querySelectorAll(selector);
         var delay = 1000;
-        var speed = 150;
+        var speed = speed;
 
         for (var i = 0; i < fragments.length; i++) {
           window.setTimeout(function() {
@@ -235,7 +313,11 @@
 
       }
 
-      Reveal.addEventListener('componentsSlide', iterateFragments, false );
+      var iterateComponents = iterateFragments.bind(null, '.component .fragment', 150);
+      Reveal.addEventListener('componentsSlide', iterateComponents, false);
+
+      var iterateLogos = iterateFragments.bind(null, '.logo-list .fragment', 300);
+      Reveal.addEventListener('logosSlide', iterateLogos, false);
 
     </script>
   </body>
