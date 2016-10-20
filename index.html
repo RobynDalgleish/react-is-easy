@@ -74,6 +74,14 @@
               </div>
             </div>
           </div>
+          <aside data-markdown class="notes">
+            - core react functionality
+            - mimics a DOM tree, but virtual
+            - each has its own internal rendering logic
+            - accept "props" as input
+            - props can be any kind of data, most importantly functions
+            - components can include other components, or accept them as props
+          </aside>
         </section>
 
         <section>
@@ -84,6 +92,9 @@
             <span>pass only what's needed to children.</span>
           </p>
           <img src='assets/img/component-state-tree.svg' height='450px' />
+          <aside data-markdown class="notes">
+            - state can be stored in a "master" component, or externally
+          </aside>
         </section>
 
         <section>
@@ -94,6 +105,10 @@
             trigger a re-render when data changes.
           </p>
           <img src='assets/img/component-event-tree.svg' height='450px' />
+          <aside data-markdown class="notes">
+            - state should never be manipulated directly
+            - functions can call setState(), or external state can be passed as props
+          </aside>
         </section>
 
         <section>
@@ -118,6 +133,14 @@
               ```
             </script>
           </div>
+          <aside data-markdown class="notes">
+            - called "reconciliation"
+            - one of react's most understated features
+            - feels completely natural and normal, but tons of optimization going on
+            - react turns an O(n3) problem into an O(n) one (transforming one tree into another)
+            - normally would mean 1000 nodes == ~1bil ops
+            - react docs have a great article on it
+          </aside>
         </section>
 
         <section>
@@ -215,6 +238,18 @@
               simplifies onboarding, documentation, and maintenance
             </p>
           </div>
+          <aside data-markdown class="notes">
+            - API influenced by lisp and erlang
+            - decentralized "processes" (components)
+            - can only communicate through "message passing" (event handlers that alter state)
+            - no shared global state (only props and local state)
+            - declarative structure
+            - pairs naturally with js, which has a functional heart
+              - no inheritance, easy composition
+              - first-class functions
+            - other big libraries try to force OOP concepts into JS
+            - react embraces JS
+          </aside>
         </section>
 
         <section>
@@ -310,7 +345,7 @@
 
         <section>
           <h2>there's less of it</h2>
-          <p>
+          <p class='fragment fade-up'>
             out of the box, you only get component rendering
             <br>
             <small>(sufficient for 90% of projects, imo)</small>
@@ -416,7 +451,7 @@
         <section>
           <h2>overengineering</h2>
           <h4 class='fragment fade-up'>
-            99.999~% projects will never need more than the basics
+            99.999~% of projects will never need more than the basics
           </h4>
           <p class='fragment fade-up'>
             there are tons of addons, and programmers
@@ -436,6 +471,13 @@
               <small>no, this is not a joke. this dude is serious.</small>
             </p>
           </div>
+          <aside data-markdown class="notes">
+            - the result of the ways people fuck it up, combined
+              - misunderstanding
+              - bad habits
+              - inexperience
+              - overengineering
+          </aside>
         </section>
 
         <!-- Section #6 ------------------------------------------------------->
@@ -458,7 +500,7 @@
         </section>
 
         <section>
-          <h2 class='fragment fade-up'>one state</h2>
+          <h2>one state</h2>
           <p class='fragment fade-up'>
             your app should have one single, immutable source of truth.
           </p>
@@ -518,6 +560,14 @@
         <section>
           <h3>in conclusion,</h3>
           <h1>don't fuck it up</h1>
+        </section>
+
+        <section>
+          <h2>thinking in react</h2>
+          <h4>by pete hunt</h4>
+          <p>
+            <small>https://facebook.github.io/react/docs/thinking-in-react.html</small>
+          </p>
         </section>
 
       </div>
