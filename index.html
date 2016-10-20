@@ -168,16 +168,18 @@
 
         <section>
           <h2>high performance</h2>
-          <p>
+          <p class='fragment fade-up'>
             react outperforms in common DOM ops
             <br>
-            <small>(highest-performing UI lib, competes with DOM-only libs on performance)</small>
+            <small class='fragment fade-up'>(highest-performing UI lib, competes with DOM-only libs on performance)</small>
           </p>
-          <img src='assets/img/benchmark-paint.svg' style='width:49%; float:left;' />
-          <img src='assets/img/benchmark-fps.svg' style='width:49%; float:right;' />
-          <p>
-            <small>https://auth0.com/blog/more-benchmarks-virtual-dom-vs-angular-12-vs-mithril-js-vs-the-rest/</small>
-          </p>
+          <div class='fragment fade-up'>
+            <img src='assets/img/benchmark-paint.svg' style='width:49%; float:left;' />
+            <img src='assets/img/benchmark-fps.svg' style='width:49%; float:right;' />
+            <p>
+              <small>https://auth0.com/blog/more-benchmarks-virtual-dom-vs-angular-12-vs-mithril-js-vs-the-rest/</small>
+            </p>
+          </div>
         </section>
 
         <section>
@@ -186,29 +188,33 @@
             <small>(easier than anything else, at least)</small>
           </p>
           <ul>
-            <li>declarative components only need props</li>
-            <li>no need for mocks or special test logic</li>
-            <li>easily run tests without build-up/tear-down</li>
+            <li class='fragment fade-up'>declarative components only need props</li>
+            <li class='fragment fade-up'>no need for mocks or special test logic</li>
+            <li class='fragment fade-up'>easily run tests without build-up/tear-down</li>
           </ul>
           <h3>&nbsp;</h3>
-          <h4>also good</h4>
-          <p>
-            easy to test == easy to understand
-          </p>
+          <div class='fragment fade-up'>
+            <h4>also good</h4>
+            <p>
+              easy to test == easy to understand
+            </p>
+          </div>
         </section>
 
         <section>
           <h2>functional concepts</h2>
           <ul>
-            <li>immutable data</li>
-            <li>composable functions</li>
-            <li>declarative logic</li>
+            <li class='fragment fade-up'>immutable data</li>
+            <li class='fragment fade-up'>composable functions</li>
+            <li class='fragment fade-up'>declarative logic</li>
           </ul>
           <h3>&nbsp;</h3>
-          <h4>also good</h4>
-          <p>
-            simplifies onboarding, documentation, and maintenance
-          </p>
+          <div class='fragment fade-up'>
+            <h4>also good</h4>
+            <p>
+              simplifies onboarding, documentation, and maintenance
+            </p>
+          </div>
         </section>
 
         <section>
@@ -217,18 +223,20 @@
             <small>for real, seriously</small>
           </p>
           <ul>
-            <li>no assumptions or requirements</li>
-            <li>100% flexible, but with prescribed best-practices</li>
-            <li>as much or as little as you want</li>
-            <li>client-side, server-side, or both</li>
+            <li class='fragment fade-up'>no assumptions or requirements</li>
+            <li class='fragment fade-up'>100% flexible, but with prescribed best-practices</li>
+            <li class='fragment fade-up'>as much or as little as you want</li>
+            <li class='fragment fade-up'>client-side, server-side, or both</li>
           </ul>
           <h3>&nbsp;</h3>
-          <h4>case in point</h4>
-          <p>
-            facebook's initial react app was just the chat box,
-            <br>
-            now it's the whole site
-          </p>
+          <div class='fragment fade-up'>
+            <h4>case in point</h4>
+            <p>
+              facebook's initial react app was just the chat box,
+              <br>
+              now it's the whole site
+            </p>
+          </div>
         </section>
 
         <section>
@@ -237,19 +245,23 @@
             make stateful data painless
           </p>
           <h4>&nbsp;</h4>
-          <h4>hooks for everything</h4>
-          <ul>
-            <li>component creation / destruction</li>
-            <li>prop changes</li>
-            <li>should update / will update / did update</li>
-          </ul>
+          <div class='fragment fade-up'>
+            <h4>hooks for everything</h4>
+            <ul>
+              <li>component creation / destruction</li>
+              <li>prop changes</li>
+              <li>should update / will update / did update</li>
+            </ul>
+          </div>
           <h4>&nbsp;</h4>
-          <h4>stop the jank</h4>
-          <p>
-            no race conditions, "cross-component" communication,
-            <br>
-            or <code>scope.$apply()</code> bullshit
-          </p>
+          <div class='fragment fade-up'>
+            <h4>stop the jank</h4>
+            <p>
+              no race conditions, "cross-component" communication,
+              <br>
+              or <code>scope.$apply()</code> bullshit
+            </p>
+          </div>
         </section>
 
         <section data-state="logosSlide">
@@ -283,14 +295,16 @@
         </section>
 
         <section>
-          <h2>it's different</h2>
-          <h4>nothing new, but unfamiliar</h4>
+          <div>
+            <h2>it's different</h2>
+            <h4>nothing new, but unfamiliar</h4>
+          </div>
           <ul>
-            <li>unidirectional data, not two-way binding</li>
-            <li>components, not templates</li>
-            <li>micro, not monolithic</li>
-            <li>functional, not object-oriented</li>
-            <li>javascript, not markup</li>
+            <li class='fragment fade-up'>unidirectional data, not two-way binding</li>
+            <li class='fragment fade-up'>components, not templates</li>
+            <li class='fragment fade-up'>micro, not monolithic</li>
+            <li class='fragment fade-up'>functional, not object-oriented</li>
+            <li class='fragment fade-up'>javascript, not markup</li>
           </ul>
         </section>
 
@@ -301,13 +315,13 @@
             <br>
             <small>(sufficient for 90% of projects, imo)</small>
           </p>
-          <h4>popular features missing from core</h4>
+          <h4 class='fragment fade-up'>popular features missing from core</h4>
           <ul>
-            <li>routing</li>
-            <li>history</li>
-            <li>HTTP</li>
-            <li>data models</li>
-            <li>animation</li>
+            <li class='fragment fade-up'>routing</li>
+            <li class='fragment fade-up'>history</li>
+            <li class='fragment fade-up'>HTTP</li>
+            <li class='fragment fade-up'>data models</li>
+            <li class='fragment fade-up'>animation</li>
           </ul>
         </section>
 
@@ -338,17 +352,19 @@
             &nbsp;
           </p>
           <ul>
-            <li>it's not HTML</li>
-            <li>familiar way to write nested list structures</li>
-            <li>way easier for designers</li>
-            <li>completely optional - you can write plain js</li>
+            <li class='fragment fade-up'>it's not HTML</li>
+            <li class='fragment fade-up'>familiar way to write nested list structures</li>
+            <li class='fragment fade-up'>way easier for designers</li>
+            <li class='fragment fade-up'>completely optional - you can write plain js</li>
           </ul>
         </section>
 
         <section>
           <h2>confusing to some</h2>
-          <img src="assets/img/quora-question.png" style='max-height:400px;' />
-          <p>
+          <img src="assets/img/quora-question.png"
+            class='fragment fade-up'
+            style='max-height:400px;' />
+          <p class='fragment fade-up'>
             a fundamental understanding of software design is required,
             <br>
             but react is also a great way to <em>get</em> that understanding.
@@ -364,8 +380,8 @@
 
         <section>
           <h2>misunderstanding</h2>
-          <h4>react is just for rendering UIs</h4>
-          <p>
+          <h4 class='fragment fade-up'>react is just for rendering UIs</h4>
+          <p class='fragment fade-up'>
             you don't need to build entire websites with it.
             <br>
             it's fun, but it's overkill almost every time.
@@ -374,19 +390,23 @@
 
         <section>
           <h2>old habits die hard</h2>
-          <p>people often bring baggage from other frameworks or languages</p>
+          <p class='fragment fade-up'>
+            people often bring baggage from other frameworks or languages
+          </p>
           <ul>
-            <li>tangled webs of two-way data binding</li>
-            <li>DOM manipulation outside of app flow</li>
-            <li>imperative application structure (vs. declarative)</li>
-            <li>"all-or-nothing" mentality</li>
+            <li class='fragment fade-up'>tangled webs of two-way data binding</li>
+            <li class='fragment fade-up'>DOM manipulation outside of app flow</li>
+            <li class='fragment fade-up'>imperative application structure (vs. declarative)</li>
+            <li class='fragment fade-up'>"all-or-nothing" mentality</li>
           </ul>
         </section>
 
         <section>
-          <h2>plain old inexperience</h2>
-          <h4>"front-end" dev is really easy to get into, which is great!</h4>
-          <p>
+          <h2 class='fragment fade-up'>plain old inexperience</h2>
+          <h4 class='fragment fade-up'>
+            "front-end" dev is really easy to get into, which is great!
+          </h4>
+          <p class='fragment fade-up'>
             however, the industry is hyper-saturated with
             <br>
             beginners, and react is the The New Shit™
@@ -395,8 +415,10 @@
 
         <section>
           <h2>overengineering</h2>
-          <h4>99.999~% projects will never need more than the basics</h4>
-          <p>
+          <h4 class='fragment fade-up'>
+            99.999~% projects will never need more than the basics
+          </h4>
+          <p class='fragment fade-up'>
             there are tons of addons, and programmers
             <br>
             are especially vulnerable to technology fetishism.
@@ -405,11 +427,15 @@
 
         <section>
           <h2>just too fucking much</h2>
-          <h4>boilerplates, starter kits, build systems, task runners</h4>
-          <img src='assets/img/boilerplate.png' />
-          <p>
-            <small>no, this is not a joke. this dude is serious.</small>
-          </p>
+          <h4>
+            boilerplates, starter kits, build systems, task runners
+          </h4>
+          <div class='fragment fade-up'>
+            <img src='assets/img/boilerplate.png' />
+            <p>
+              <small>no, this is not a joke. this dude is serious.</small>
+            </p>
+          </div>
         </section>
 
         <!-- Section #6 ------------------------------------------------------->
@@ -421,10 +447,10 @@
 
         <section>
           <h2>interfaces should react to data</h2>
-          <p>
+          <p class='fragment fade-up'>
             declarative program flow is the best bug zapper.
           </p>
-          <p>
+          <p class='fragment fade-up'>
             <small>
               you will eliminate race conditions this way, no joke.
             </small>
@@ -432,25 +458,27 @@
         </section>
 
         <section>
-          <h2>one state</h2>
-          <p>
+          <h2 class='fragment fade-up'>one state</h2>
+          <p class='fragment fade-up'>
             your app should have one single, immutable source of truth.
           </p>
         </section>
 
         <section>
           <h2>keep components small</h2>
-          <h4>follow the unix philosophy</h4>
-          <p>
-            <em>"do one thing and do it well"</em>
-          </p>
+          <div class='fragment fade-up'>
+            <h4>follow the unix philosophy</h4>
+            <p>
+              <em>"do one thing and do it well"</em>
+            </p>
+          </div>
         </section>
 
         <section>
           <h2>build like a video game</h2>
           <h3>or desktop program</h3>
           <h3>&nbsp;</h3>
-          <p>
+          <p class='fragment fade-up'>
             imagine a <code>main()</code> function that gets
             <br>
             called every frame or cycle.
@@ -459,9 +487,10 @@
 
         <section>
           <h2>take only what you need</h2>
-          <h4>here's a fully working react setup</h4>
-          <pre style='width:60%;'>
-            <code>
+          <div class='fragment fade-up'>
+            <h4>here's a fully working react setup</h4>
+            <pre style='width:60%;'>
+              <code>
 &lt;html&gt;
   &lt;body&gt;
 
@@ -478,11 +507,12 @@
 
   &lt;/body&gt;
 &lt;/html&gt;
-            </code>
-          </pre>
-          <p>
-            <small>(you could build a whole app like this...and this is the <em>deluxe</em> implementation)</small>
-          </p>
+              </code>
+            </pre>
+            <p>
+              <small>(you could build a whole app like this...and this is the <em>deluxe</em> implementation)</small>
+            </p>
+          </div>
         </section>
 
         <section>
